@@ -11,7 +11,7 @@
       "image": "./assets/splash.png"
     },
     "updates": {
-      "url": "https://expo-update-flexit.vercel.app/manifest",
+      "url": "https://expo-update-flexit.vercel.app/api/manifest",
       "runtimeVersion": "1.0.0",
       "checkAutomatically": "ON_LOAD",
       "fallbackToCacheTimeout": 0
