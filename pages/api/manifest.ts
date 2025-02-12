@@ -18,6 +18,7 @@ import {
 } from '../../common/helpers';
 
 export default async function manifestEndpoint(req: NextApiRequest, res: NextApiResponse) {
+  console.log('🚀 ~ manifestEndpoint ~ req:', req.query);
   if (req.method !== 'GET') {
     res.statusCode = 405;
     res.json({ error: 'Expected GET.' });
@@ -55,6 +56,7 @@ export default async function manifestEndpoint(req: NextApiRequest, res: NextApi
   let updateBundlePath: string;
   try {
     updateBundlePath = await getLatestUpdateBundlePathForRuntimeVersionAsync(runtimeVersion);
+    console.log('🚀 ~ manifestEndpoint ~ updateBundlePath:', updateBundlePath);
   } catch (error: any) {
     res.statusCode = 404;
     res.json({
